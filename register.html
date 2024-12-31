@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                SKY<i class="fas fa-cloud"></i>CART
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><button id="loginBtn"><i class="fas fa-user"></i> Login</button></li>
+            <li><button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="register-modal visible">
+        <div class="register-content">
+            <button class="close-btn" id="closeRegisterModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Create Account</h2>
+            <form id="registerForm" class="register-form">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit" class="register-btn">Create Account</button>
+            </form>
+            <div class="social-signup">
+                <div class="divider"><br><br>
+                    <span>or sign up with</span>
+                </div>
+                <div class="social-buttons">
+                    <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                    <button class="social-btn google"><i class="fab fa-google"></i></button>
+                    <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                </div>
+            </div>
+            <div class="login-link">
+                <span>Already have an account?</span>
+                <a href="#" onclick="showLoginModal()">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

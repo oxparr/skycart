@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                SKY<i class="fas fa-cloud"></i>CART
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><button id="loginBtn"><i class="fas fa-user"></i> Login</button></li>
+            <li><button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="shop-container">
+        <aside class="filters">
+            <div class="filter-section">
+                <h2>Filters</h2>
+            </div>
+            <div class="filter-section">
+                <h4>Categories</h4>
+                <div class="category-filters">
+                    <label><input type="checkbox" value="electronics"> Electronics</label>
+                    <label><input type="checkbox" value="clothing"> Clothing</label>
+                    <label><input type="checkbox" value="furniture"> Furniture</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Price Range</h4>
+                <div class="price-range">
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" id="maxPrice" placeholder="Max">
+                    </div>
+                    <button id="applyPrice" class="apply-filter">Apply</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Rating</h4>
+                <div class="rating-filters">
+                    <label class="rating-option">
+                        <input type="radio" name="rating" value="4">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>4.0 & above</span>
+                    </label>
+                    <label class="rating-option">
+                        <input type="radio" name="rating" value="3">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>3.0 - 3.9</span>
+                    </label>
+                    <label class="rating-option">
+                        <input type="radio" name="rating" value="2">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>2.0 - 2.9</span>
+                    </label>
+                    <label class="rating-option">
+                        <input type="radio" name="rating" value="1">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span>0.0 - 1.9</span>
+                    </label>
+                </div>
+            </div>
+
+           
+
+            <button id="clearFilters" class="clear-filters">Clear All Filters</button>
+        </aside>
+
+        <main class="products-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>SkyCart is your premier destination for online shopping, offering a wide selection of quality products at competitive prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for updates and exclusive offers!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 SkyCart. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
